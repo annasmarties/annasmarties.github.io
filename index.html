@@ -1,16 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>D3 Page Template</title>
-        <script type="text/javascript" src="d3/d3.js"></script>
-    </head>
-    <body>
-        <script type="text/javascript">
-            // Your beautiful D3 code will go here
-			d3.select("body")
-				.append("p")
-				.text("New paragraph!");
-        </script>
-    </body>
+  <head>
+      <meta charset="utf-8">
+      <title>Vizualizing Crime Data in San Franscisco</title>
+      <script type="text/javascript" src="../d3/d3.js"></script>
+      <style type="text/css">
+        #page-wrap {
+          width: 900px;
+          margin: 0 auto;
+          text-align: left;
+        }
+        h2,
+        h3 {
+          font-family: Helvetica;
+          color: #808080;
+        }
+        p,
+        li {
+          font-family: Helvetica;
+          color: #444444;
+        }
+        body {
+        text-align: center;
+        }
+        .button {
+        display: inline-block;
+        padding: 12px 16px;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: center; 
+        text-decoration: none;
+        outline: none;
+        box-shadow: 0 1px #999;
+        background-color: white; 
+        color: #444444; 
+        border: 2px solid #555555;
+      }
+
+      .button:active {
+        transform: translateY(2px);
+      }
+      
+      .bar:hover {
+        fill: #FFCC33;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page-wrap">
+    <h2>Visualizing Crime Data in San Fransisco</h1>
+    <h3> Number of Prostitution and Vehicle theft crimes committed in 2003 and 2015</h3>
+    <p> </p>
+    <p> The crime data for the two categories, prostitution and vehicle theft, are vizualized in scatterplot where each point is proportional in size to the number of crimes committed in a district in these two categories 
+      <li> You can compare the data and observe the change that has taken place by comparing the graphs for 2003 and 2015 </li>
+    </p>
+    <p></p>
+    <button id="button2003" class="button" style="background-color:#008CBA;" >2003</button>
+    <button id="button2015" class="button" >2015</button>
+    <p></p>
+    <div id="area1"></div>
+
+    <h3>Evolution of Crimes in San Fransisco by hour</h2>
+    <p></p>
+    <p>The following visualization consists of an interactive <b>histogram</b>, depicting the number of <b>Prostitution</b>, <b>Vehicle Theft</b>  
+      and <b>Trespass</b> Incidents in San Fransisco by hour. <br>
+      <li>You can freely toggle between different crimes and see how the number of incidents changes during the day.</li>
+      <li>You can hover over every bar to highlight it and see detailed number of incidents.</li>
+    </p>
+    <p></p>
+    <button id="Prostitution" class="button" style="background-color:#008CBA;" >Prostitution</button>
+    <button id="VehicleTheft" class="button" >Vehicle Theft</button>
+    <button id="Trespass" class="button" >Trespass</button>
+    <p></p>
+    <p></p>
+    <div id="area2"></div>
+      <script type="text/javascript">
+
+          //Width and height
+          var margin = {top: 20, right: 20, bottom: 30, left: 40},
+          w = 1024 - margin.left - margin.right,
+          h = 500 - margin.top - margin.bottom;
+          var padding = 40;
+
+          //Create SVG element for scatterplot
+          var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+      </script>
+  </body>
 </html>
