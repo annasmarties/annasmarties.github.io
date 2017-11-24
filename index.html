@@ -98,33 +98,16 @@ body, html {
 That are waiting to be analysed!
 </p>
 
-<h3> VIDEO element</h3>
-
-<video id="myVideo" width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
 </video>
 
-<p>Click the button to get the duration of the video, in seconds.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-var iframe = document.createElement('iframe');
-iframe.src = 'http://www.youtube.com/embed/9kd-PoHWah8';
-iframe.width = '560';
-iframe.height = '315';
-
-var bottom = document.getElementById('bottom');
-bottom.appendChild(iframe);
-}
-</script>
-
-
+<p>
+Video courtesy of 
+<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+</p>
 
 
 </div>
