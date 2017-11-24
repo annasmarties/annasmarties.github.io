@@ -114,8 +114,13 @@ That are waiting to be analysed!
 
 <script>
 function myFunction() {
-    var x = document.getElementById("myVideo").duration;
-    document.getElementById("demo").innerHTML = x;
+var iframe = document.createElement('iframe');
+iframe.src = 'http://www.youtube.com/embed/9kd-PoHWah8';
+iframe.width = '560';
+iframe.height = '315';
+
+var bottom = document.getElementById('bottom');
+bottom.appendChild(iframe);
 }
 </script>
 
