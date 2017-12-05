@@ -14,12 +14,109 @@ body, html {
     line-height: 1.8;
 }
 
+p.normal {
+    font-style: normal;
+    color:black;
+}
+
+
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(66,217,244,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  text-align: center;
+  text-decoration: none;
+  padding: 18px 5px;
+} 
+
+.active, .dot:hover {
+  background-color: #42d9f4;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to 
+} 
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 /* First image (Logo. Full height) */
@@ -131,7 +228,7 @@ In this section we are trying to find out which characters are the most central.
     <figure>
     <center><img src="Figures/Community/HP_central_methods.png" width="100%" height="100%"
          alt = "The network of the main characters" /></center>
-  <figcaption>In this figure visulizes the overview of the different tools.</figcaption>
+  <center><figcaption><p class="normal"><b>In this figure visulizes the overview of the different tools.</figcaption> </center> </b></p>
   </figure>
   <!--</p>-->
   <p></p>
@@ -315,6 +412,9 @@ How can a page have sentiment? We have a big list of super common and used Engli
 
   </p>
 
+
+
+
   <p>
 Using same functions on Python, we have one plot for each movie with the sentiment profile of that book. A sentiment profile is a graph that has the sentiment on the y-axis and position in the text on the x-axis. The effect of changing the size of the sliding window is that it changes the amount of text we are taking in consideration. Starting with 15 words we capture the moving average of the sentiment of a few sentences. Increasing the window the moving average will say more about the whole book and can capture a more important flow. In a page there are usually around 500 words. Using one page as the window, it is possible to follow how the sentiment will change page by page.
 
@@ -396,7 +496,7 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
     <center><img src="Figures/Sentimental/Movie1.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+
 
 
 <h3>Image of the </h3>
@@ -404,14 +504,14 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
     <center><img src="Figures/Sentimental/Movie2.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+ 
 
 <h3>Image of the </h3>
   <p>
     <center><img src="Figures/Sentimental/Movie3.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+
 
 
 <h3>Image of the </h3>
@@ -419,7 +519,7 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
     <center><img src="Figures/Sentimental/Movie4.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+
 
 
 <h3>Image of the </h3>
@@ -427,7 +527,7 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
     <center><img src="Figures/Sentimental/Movie5.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+ 
 
 
 <h3>Image of the </h3>
@@ -435,21 +535,21 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
     <center><img src="Figures/Sentimental/Movie6.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+
 
 <h3>Image of the </h3>
   <p>
     <center><img src="Figures/Sentimental/Movie7.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+
 
 <h3>Image of the </h3>
   <p>
     <center><img src="Figures/Sentimental/Movie8.png" width="90%" height="90%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+  
 
 
 
@@ -459,7 +559,7 @@ On average the saddest movie is Movie 1 and Movie 6, the happiest ones are Movie
 
 <body>
 <iframe width="854" height="480" src="https://www.youtube.com/embed/Jx3BuC4teV0?start=150" frameborder="0" allowfullscreen></iframe>
-<body>
+</body>
 
   <p>
  In movie 3 “The prisoner of Azkaban”  the saddest moment in when Sirius Black ‘wants’ to kill Harry and Hermione proposes to sacrifice herself to protect Harry.
@@ -467,7 +567,7 @@ On average the saddest movie is Movie 1 and Movie 6, the happiest ones are Movie
 
   <body>
 <iframe width="854" height="480" src="https://www.youtube.com/embed/8cL527bg0II?start=130" frameborder="0" allowfullscreen></iframe>
-<body>
+</body>
 
   <p>
 In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing the castle housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the harry potter movies.
@@ -484,7 +584,7 @@ In conclusion, we found an efficient way to detect and investigate the sentiment
   <p>
 
   </p>
-
+</div>
   <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -492,17 +592,236 @@ In conclusion, we found an efficient way to detect and investigate the sentiment
   </div>
 </div>
 
+
 <!-- Container (TFIDF Section) -->
 <div class="w3-content w3-container w3-padding-64" id="frequency">
-  <h3 class="w3-center">WORD FREQUENCY</h3>
-  <p class="w3-center"><em>I love my wand</em></p>
-  <p>Harry potter. A magic universe …
-…. With a lot of special characters ...
-That are waiting to be analysed!
+  <h3 class="w3-center">Spell analysis</h3>
+  <p class="w3-center"><em>Frequency of spells and curses</em></p>
+  <p>
+    The frequency of each casted spell or curse was analyzed. In order to realize this we tokenized the books and then ran the frequency distribution function. Afterwards, we matched the spell list excel sheet with each tokenized term count book. Tokenization is for lexical analysis, the process of classifying characters into individual words based on a space delimiter.  This resulted in the frequency of spells and curses demonstrated below in a bar plot.
+    </p>
+<p>
+We expected given the nature of the story that the frequency would increase as the universe became more complex with each year. This turned out to be the case. 
 </p>
+
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 1.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+ <p>
+In the first book only few spells are casted and two curses, Mortis and Mimblewimble
+  </p>
+
+
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 2.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+
+   <p>
+In the second book we already have more spells but a good example is the 6th book where a lot of spells are casted and many curses.
+  </p>
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 3.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+
+
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 4.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+ 
+
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 5.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 6.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+
+  <p> 
+As one can see then the horcrux curse is mentioned over 40 times. That is of no surprise since the plot of the book is the search for the seven horcruxes that Voldemort divided his soul into.
+</p>
+
+ <p>
+"Yes, I think so," said Dumbledore. "Without his
+Horcruxes, Voldemort will be a mortal man with a
+maimed and diminished soul. Never forget, though,
+that while his soul may be damaged beyond repair,
+his brain and his magical powers remain intact. It will
+take uncommon skill and power to kill a wizard like
+Voldemort even without his Horcruxes."
+ </p>
+
+ <p>
+And finally we reach book 7 we can see that the search continues for the horcrux, appearing now over 80 times. Furthermore we now have the largest collection of spells and curses.
+
+ </p>
+
+<h3>Image of the </h3>
+  <p>
+    <center><img src="Figures/TF/Spells_Book 7.png" width="90%" height="90%"
+         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+  </p>
+  
+<h3 class="w3-center">TF-IDF</h3>
+<p>
+We want to find the most representing words for each book and visualize them in a figure, a word cloud figure. In a word cloud figure the words differ is size based on how representing they are for a given book. 
+</p>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">1 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 1 - The Philosopher_s Stone.png" style="width:50%"></center>
+  <div class="text">Representative word: smelting</div>
 </div>
 
+<div class="mySlides fade">
+  <!--<div class="numbertext">2 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 2 - The Chamber of Secrets.png" style="width:50%"></center>
+  <div class="text">Representative word: mason</div>
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">3 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 3 - The Prisoner of Azkaban.png" style="width:50%"></center>
+  <div class="text">Representative word: boggart</div>
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">3 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 4 - The Goblet of Fire.png" style="width:50%"></center>
+  <div class="text">Representative word: portkey</div>
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">3 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 5 - The Order of the Phoenix.png" style="width:50%"></center>
+  <div class="text">Representative word: thestral</div>
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">3 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 6 - The Half Blood Prince.png" style="width:50%"></center>
+  <div class="text">Representative word: N/A</div>
+</div>
+
+<div class="mySlides fade">
+  <!--<div class="numbertext">3 / 3</div>-->
+  <center><img src="Figures/TF/Wordcloud_Book 7 - The Deathly Hallows.png" style="width:50%"></center>
+  <div class="text">Representative word: cattermole</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)">Book1</span> 
+  <span class="dot" onclick="currentSlide(2)">Book2</span> 
+  <span class="dot" onclick="currentSlide(3)">Book3</span> 
+  <span class="dot" onclick="currentSlide(4)">Book4</span> 
+  <span class="dot" onclick="currentSlide(5)">Book5</span> 
+  <span class="dot" onclick="currentSlide(6)">Book6</span> 
+  <span class="dot" onclick="currentSlide(7)">Book7</span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="w3-content w3-container w3-padding-64" id=""> </div>
+
+<!-- 
+
+<h2>What do parties say with their #hashtags?</h2>
+                <div class="img-car">
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie1.png" alt="">
+                        <p>Alternativet's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie2.png" alt="">
+                        <p>Dansk Folkeparti's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie3.png" alt="">
+                        <p>Enhedslisten's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie4.png" alt="">
+                        <p>De Konservative's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie5.png" alt="">
+                        <p>Liberal Alliance's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie6.png" alt="">
+                        <p>Radikale Venstre's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie7.png" alt="">
+                        <p>Socialdemokratiet's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie7.png" alt="">
+                        <p>Socialistisk Folkeparti's hashtags (top tfidf as sizes)</p>
+                    </div>
+                    <div class="single-item">
+                        <img src="Figures/Sentimental/Movie7.png" alt="">
+                        <p>Venstre's hashtags (top tfidf as sizes)</p>
+                    </div>
+                </div>
+
+-->
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <!--
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <img src="Figures/Small_graph.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Network of main characters">
@@ -540,7 +859,8 @@ That are waiting to be analysed!
     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div>
 </div>
-
+-->
+</div>
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
@@ -561,8 +881,8 @@ That are waiting to be analysed!
 <!-- Container (Conclusion Section) -->
 
 <div class="w3-content w3-container w3-padding-64" id="conclusion">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love my wand</em></p>
+  <h3 class="w3-center">Conclusion</h3>
+  <p class="w3-center"><em>The end</em></p>
   <p>Harry potter. A magic universe …
 …. With a lot of special characters ...
 That are waiting to be analysed!
