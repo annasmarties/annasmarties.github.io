@@ -22,7 +22,7 @@ p.normal {
 
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3,.bgimg-4,.bgimg-5,.bgimg-6,.bgimg-7 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -119,7 +119,7 @@ p.normal {
   border-radius: 3px 0 0 3px;
 }
 
-/* First image (Logo. Full height) */
+/* First image (Home photo of the gang) */
 .bgimg-1 {
     /*background-image: url('https://w3schools.com/w3images/parallax1.jpg');
     min-height: 100%;*/
@@ -128,15 +128,44 @@ p.normal {
       min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (castle) */
 .bgimg-2 {
     background-image: url("https://www.techavy.com/wp-content/uploads/2017/04/CMWTqJx.jpg");
     min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image (conlusion photo) */
 .bgimg-3 {
     background-image: url("https://d1jo0zet24jmxt.cloudfront.net/content/9490/9b67a815b5f3eed934bfdece52348682.jpg");
+    min-height: 400px;
+}
+
+
+/* Third image (sentimental analysis) */
+.bgimg-4 {
+    background-image: url("https://nerdist.com/wp-content/uploads/2017/01/harry-potter.jpg");
+    min-height: 400px;
+}
+
+
+/* Third image (community photo) */
+.bgimg-5 {
+    background-image: url("https://bplusmovieblog.files.wordpress.com/2013/08/harry-potter-and-the-sorcerers-stone-260.png");
+    min-height: 400px;
+}
+
+
+/* Third image (spells photo) */
+.bgimg-6 {
+    background-image: url("https://www.space.ca/wp-content/uploads/2015/10/harry-potter1.jpg");
+    min-height: 400px;
+}
+
+
+
+/* Third image (network photo) */
+.bgimg-7 {
+    background-image: url("https://i.pinimg.com/originals/e3/5d/3a/e35d3a7a819e7a582a45eb60cc40b3b3.jpg");
     min-height: 400px;
 }
 
@@ -145,7 +174,7 @@ p.normal {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5,.bgimg-6, .bgimg-7 {
         background-attachment: scroll;
     }
 }
@@ -209,13 +238,13 @@ That are waiting to be analysed</em></p>
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-7 w3-display-container w3-opacity-min" id="network">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">THE NETWORK</span>
   </div>
 </div>
 <!-- Container (Network Section) -->
-<div class="w3-content w3-container w3-padding-64" id="network">
+<div class="w3-content w3-container w3-padding-64" >
   <h2 class="w3-center">NETWORK ANALYSIS</h2>
   <h4 class="w3-center"><em>Statistics of the network</em></h4>
   <p> 
@@ -264,7 +293,7 @@ Finally, we notice a big correlation between the eigenvector out centrality and 
 
 </div>
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-5 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">THE COMMUNITES</span>
   </div>
@@ -382,7 +411,7 @@ We see though that the distinction is pretty good! In the first community all bu
 
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-4 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">SENTIMENTAL ANALYSIS</span>
   </div>
@@ -798,7 +827,7 @@ In conclusion, we found an efficient way to detect and investigate the sentiment
   </p>
 </div>
   <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-6 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">WORD FREQUENCY</span>
   </div>
