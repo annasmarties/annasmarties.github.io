@@ -226,7 +226,6 @@ In this section we are trying to find out which characters are the most central.
     <figure>
     <center><img src="Figures/Community/HP_central_methods.png" width="100%" height="100%"
          alt = "The network of the main characters" /></center>
-  <center><figcaption><p class="normal"><b>In this figure visulizes the overview of the different tools.</figcaption> </center> </b></p>
   </figure>
   <!--</p>-->
   <p></p>
@@ -256,13 +255,11 @@ Finally, we notice a big correlation between the eigenvector out centrality and 
 </p> 
 
 
-
-  <h3>Image of the network</h3>
   <p>
     <center><img src="Figures/Community/Big_graph.png" width="100%" height="100%"
          alt = "The network of the main characters" /></center>
   </p>
-  <p>In this figure the characters are realized in a network</p>
+  <center><p class="normal"> <b>In this figure the characters are realized in a network </b></p></center>
 
 
 </div>
@@ -281,11 +278,13 @@ Finally, we notice a big correlation between the eigenvector out centrality and 
 We have thus applied this algorithm to 2 different communities. One the one hand we were interested in the 4 different houses of Hogwarts ( Gryffindor, Slytherin, Ravenclaw and Hufflepuff), but on the other hand we were also interested in the interaction between the good and bad guys in Harry Potter. There is in Harry Potter one community of bad guys: the Death Eaters. Yes the name sounds horrible! But also several communities of good guys such as the Order of the Phoenix and the Army of Dumbledore. It seemed thus interesting to asses these two separated problems.
 </p>
 
-  <h3>Image of the houses network</h3>
   <p>
     <center><img src="Figures/Community/Graph_house.png" width="100%" height="100%"
          alt = "The network of the main characters" /></center>
   </p>
+<center><p class="normal"> <b>Here we have the network except we have added the houses of the characters </b></p></center>
+
+
   <p>Here is a plot of network with only the House members. Red nodes are Gryffindor nodes. Green nodes are Slytherin nodes. Yellow nodes are Hufflepuff nodes. Blue nodes are Ravenclaw nodes.
 
   We notice in the center a higher density of Gryffindor nodes. This makes sense since in Harry Potter, the main house (the house of Harry Potter) is Gryffindor.
@@ -296,12 +295,12 @@ We had a problem since not all of our nodes had a house or a good or bad label. 
 A number in the square (with row i and column j), is the number of characters that are in both community corresponding to row i and community corresponding to row j. We will use the confusion matrix to compare the communities that are naturally present in Harry Potter (houses, Good and Bad Guys) versus the communities found by the Louvain algorithm (these have no name and thus are just numbered).
 </p>
 
-  <h3>Image of the communities</h3>
+ 
   <p>
     <center><img src="Figures/Community/Confusion_matrix_Houses.png" width="100%" height="100%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>In this figure the communites</p>
+  <center><p class="normal"> <b>In this figure the communites are visulized in a confusion matrix </b></p></center>
 
  <p>
 This matrix tells us that the categories of houses are not so good to distinguish the different communities. The only community that is somewhat better captured is the slytherin house. On the one hand, we see that the community 3 we have a vast majority of Slytherins. This is also the case in community 6.  On the other hand we distinguish community 2 which has members of several different houses but only one from Slytherin.
@@ -309,21 +308,19 @@ This matrix tells us that the categories of houses are not so good to distinguis
 
 
 
-
-   <h3>Image of the </h3>
   <p>
     <center><img src="Figures/Community/Confusion_matrix_Good_bad_guys.png" width="70%" height="70%"
          alt = "Visualisation of the communities bad guys vs. good guys" /></center>
   </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
+  <center><p class="normal"> <b>Confusion Matrix of the Good and bad guys </b></p></center>
 
 
-  <h3>Image of </h3>
+
   <p>
     <img src="Figures/Community/Graph_DE_good_guys.png" width="100%" height="100%"
          alt = "Visualisation of the communities bad guys vs. good guys" />
   </p>
-  <p>Death eaters versus the Good guys</p>
+  <center><p class="normal"> <b>Death eaters versus the Good guys </b></p></center>
 <p>
 A first observation here is that there are way more good than bad guys. This is because we took several different lists for the Good Guys :'First Order of the Phoenix, Dumbledore's Army and the Order of the Phoenix allies. While we only had one interesting list for the bad Guys: the Death Eaters.
 
@@ -881,11 +878,20 @@ We expected given the nature of the story that the frequency would increase as t
   <span class="dot" name="dot3" onclick="currentSlide(7,3)">Book7</span> 
 </div> 
 
+ <p> 
+In the first book only few spells are casted and two curses, Mortis and Mimblewimble
+ 
+</p>
+ <p> 
+In the second book we already have more spells but a good example is the 6th book where a lot of spells are casted and many curses.
 
-
+</p>
+ <p> 
+In book 3 we see that the most frequent spell is the expecto patronum. This is because it is the only spell that keeps away the dementors. Harry has to learn to master it because in this book there are plenty of dementors and Harry faints each time a dementor comes in contact with hm. 
+</p>
 
   <p> 
-As one can see then the horcrux curse is mentioned over 40 times. That is of no surprise since the plot of the book is the search for the seven horcruxes that Voldemort divided his soul into.
+In book 6 one can see then the horcrux curse is mentioned over 40 times. That is of no surprise since the plot of the book is the search for the seven horcruxes that Voldemort divided his soul into.
 </p>
 
  <p>
@@ -900,10 +906,30 @@ Voldemort even without his Horcruxes."
 
  <p>
 And finally we reach book 7 we can see that the search continues for the horcrux, appearing now over 80 times. Furthermore we now have the largest collection of spells and curses.
-
  </p>
 
+<center><h3> TF-IDF</h3></center>
 
+ <p>
+We want to find the most representing words for each book and visualize them in a figure, a word cloud figure. In a word cloud figure the words differ is size based on how representing they are for a given book.
+  </p>
+
+  <p>
+To realize this we utilize the TFIDF criterion
+  </p>
+
+  <p>
+TF: Term frequency, in each book see how often each word appears 
+IDF: Inverse document frequency, see how important this word is compared to its appearance in other books. In other words to see if a given frequent word also appears in the other books.
+  </p>
+
+  <p>
+    The result is a TFIDF matrix, in our case the rows are corresponding to the books and the columns to the words.
+   </p>
+
+ <p>
+  With this matrix we produce the seven word cloud figures, one for each book.
+  </p>
 
 <div class="slideshow-container">
 
@@ -965,10 +991,55 @@ And finally we reach book 7 we can see that the search continues for the horcrux
   <span class="dot" name="dot2" onclick="currentSlide(7,2)">Book7</span> 
 </div> 
 
-
-
-
-
+ <h>Book 1 </h>
+ <p>
+smelting : The school Dudley goes to<br>
+bathrobe<br>
+flamel: "Nicolas Flamel," she whispered dramatically, "is the only known maker of the Sorcerer's Stone!"<br>
+mom :Mrs. Weasley, Ron’s mother is often referred to in this book<br>
+pier<br>
+</p>
+ <h>Book 2 </h>
+ <p>
+mason: Mrs. Mason is they lady harry blows up in the air in the beginning of the book. Resulting in a dramatic discussion whether he should be kicked out of Hogwarts or not.
+</p>
+ <h>Book 3 </h>
+ <p>
+boggart :A boggart is an amortal shape-shifting non-being that takes on the form of the viewer's worst fear. The boggart was a big topic of this book since Harry's worst fear was a dementor at the time.<br>
+Pettigrew: Is introduce in this book and the reader is informed that he in fact has been Rons rat<br>
+grindylow : A Grindylow is a small, horned, pale-green water demon and a Dark creature<br>
+hinkypunk :The Hinkypunk is a little one-legged creature and looks as if it is made of smoke<br>
+executioner: An executioner from the Ministry of Magic that is sent to kill Buckbeak, Buckbeak turns out to be too valuable for Harry and the crew so Hermione helps the crew to travel back in time and save Buckbeak.<br><br>
+From the 5 five most representing words of this book, 3 of them are creatures from Professor Remus Lupin Defence against the dark art class, namely the boggart,grindylow and hinkypunk.
+</p>
+ <h>Book 4 </h>
+ <p>
+portkey: Is commonly used in this book. A portkey instantly brings anyone touching it to a specific location.<br>
+Bulgarian: This book features both the world cup in Quidditch and the competition around the Goblet of fire where the Bulgarian team plays a big role.<br>
+Karkaroff : Professor Karkaroff is the headmaster of Scandinavian magic school that the Bulgarian Viktor krum attends.<br>
+Hostage: In the games of the goblet of fire then a hostage had to be saved<br>
+leprechaun:  Are magical creature that appear in this book
+</p>
+ <h>Book 5 </h>
+ <p>
+bowtruckle: Is a magical creature studied in the class care of magical creatures<br>
+Thestrals : Skeleton flying horses, they were used in this book to fly the Orders member disguised as harry to a safe spot<br>
+clipboard<br>
+umbridge:  Dolores Jane Umbridge becomes a headmaster at hogwards in this book <br>replacing dumbeldore.<br>
+dai
+</p>
+ <h>Book 6 </h>
+ <p>
+Not really a word that represents this book
+</p>
+ <h>Book 7 </h>
+ <p>
+cattermole: Is the character that Ron is disguised as when the crew goes undercover into the ministry of magic.<br>
+xenophilius: He is the father of Luna Lovegood<br>
+carrow Siblings that are both Death Eaters<br>
+deluminator : Albus dumbledore's device which is used for taking out any light source and keeping them until bestowing them. <br>
+Peverell:  the Peverell family was the original owners of the Hallows. Antioch: the Elder Wand, Cadmus: the Resurrection Stone, and Ignotus: the Cloak of Invisibility
+</p>
 <!--
 
 <script>
