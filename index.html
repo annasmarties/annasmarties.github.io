@@ -258,6 +258,56 @@ We will create a link from node a to node b if the name of node b appears on the
   <center><p class="normal"> <b>This is the graph from which we have been working where each node is a character </b></p></center>
 
 
+
+
+ < <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+     <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">-->
+    </div>
+ 
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+
+    </div>
+  </div>
+    <p class="w3-large w3-center w3-padding-16">Harry Potter is really good at:</p>
+    <p class="w3-wide"><i class="fa fa-birthday-cake"></i>Making spells</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-empire"></i>Speaking british</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-bomb"></i>Killing</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+    </div>
+  </div>
+  </div>
+    
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">415</span><br>
+    Characters
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">4</span><br>
+    Clusters
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">4673</span><br>
+    Links
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">The Deathly Hallows</span><br>
+    Most sentimental book
+  </div>
+</div>
+
+
+
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
@@ -271,7 +321,7 @@ We will create a link from node a to node b if the name of node b appears on the
   <h2 class="w3-center">NETWORK ANALYSIS</h2>
   <h4 class="w3-center"><em>“Harry - you're a great wizard, you know."— Hermione, Harry Potter and the Philosopher's Stone</em></h4>
   <p> 
-In this section we are trying to find out which characters are the most central. These are the most important characters. For this we used different tools such as betweenness centrality, PageRank, eigenvector centrality (for in and out links) and the HITS algorithm (finds Hubs and Authorities). We thus use these different measures to be able to compare them and to see if indeed they capture the most important characters in our network. The tools are rather technical to explain, thus we have explained them in our notebook. 
+In this section we are trying to find out which characters are the most central, more specifically the most important characters. For this we used different tools such as betweenness centrality, PageRank, eigenvector centrality (for in and out links) and the HITS algorithm (finds Hubs and Authorities). We thus use these different measures to be able to compare them and to see if indeed they capture the most important characters in our network. The tools are rather technical to explain, thus we have explained them in our notebook.
 <p> 
   <h3> </h3>
   <!--<p>-->
@@ -282,25 +332,30 @@ In this section we are trying to find out which characters are the most central.
   <!--</p>-->
   <p></p>
 <p> 
-In the above graph you can see the results of the different measures. These were normalized so the maximum is at 100% and the following are percentages of this maximum.
+In the above graph one can see the results of the different measures.
 </p> 
 
 <p> 
-Harry Potter nearly always appears on top. He is just distanciated by Ron on the Hubs and eigenvector centrality out. This is because Harry Potter has plenty of links linking to him. While proportionally Ron has more links linking to other characters (out links). Both of the measures (Hubs and eigenvector centrality out) focus on the out links.
+Harry Potter nearly always appears on top. He is just distanced by Ron on the Hubs and eigenvector centrality out. This is because Harry Potter has plenty of links linking to him, thus plenty of people know him. While proportionally Ron has more links linking to other characters (out links). Ron thus knows plenty of other characters, but he is not really well known by the others. This can be due to the fact that he is really close to Harry, this means he will know a lot of people that Harry knows, but then those people will have much more connections to Harry than to him. This happens when your best friend has 7 books and movies about him..
+</p> 
+
+
+
+<p> Both of the measures, Hubs and eigenvector centrality out, focus on the out links. </p>
+
+
+<p> 
+We notice that the top 5 characters (Harry Potter, Tom Riddle (Voldemort), Dumbledore, Ron and Hermione) in all the measures are the most important characters in the Harry Potter universe (or at least what we would have guessed). 
 </p> 
 
 <p> 
-We notice that the top 5 characters (Harry Potter, Tom Riddle (Voldemort), Dumbledore, Ron and Hermione) in all the measures are the most important characters in the Harry Potter universe (or at least what we would have said). 
-</p> 
-
-<p> 
-The next 9 characters are all still important but more side characters in the Harry Potter universe. Except from Sirius Black they appear in all the books.
+The next 9 characters are all still important but more side characters in the Harry Potter universe. Except from Sirius Black they appear in most of the books.
 </p> 
 <p> 
-Dolores Umbridge is more special. She is the headmaster of Hogwarts in book 5: “Harry Potter and the Order of the Phoenix”. Thus she is very important in book 5 but otherwise she only appears in book 7 for a minor role. 
+Dolores Umbridge is more special. She is the headmaster of Hogwarts in book 5: “Harry Potter and the Order of the Phoenix”. Thus she is very important in book 5 but otherwise she only appears in book 7 for a minor role.  
 </p> 
 <p> 
-The last 5 characters of the plot represent less famous characters that only appear in one or two Harry Potter book. Some of the names were even not that familiar to us. We can thus take into consideration that betweenness centrality is a poor measure to find central nodes in this graph. In our view the best measure for this graph is PageRank that captures the first 10 characters in the plot.
+The last 5 characters of the plot represent less famous characters that only appear in one or two Harry Potter book. Some of the names were even not that familiar to us! We can thus take into consideration that betweenness centrality is a poor measure to find central nodes in this graph. In our view the best measure for this graph is PageRank that captures the first 10 characters in the plot.
 </p> 
 <p> 
 Finally, we notice a big correlation between the eigenvector out centrality and the Hubs. The same yields for eigenvector in centrality and the Authorities.
@@ -321,37 +376,45 @@ Finally, we notice a big correlation between the eigenvector out centrality and 
   <h3 class="w3-center">COMMUNITY ANALYSIS</h3>
   <h4 class="w3-center"><em>“"We are only as strong as we are united, as weak as we are divided." — Dumbledore, Harry Potter and the Goblet of Fire</em></h4>
 
-  <p>We will use the Louvain algorithm to analyse the underlying communities in the harry potter network. 
-
-We have thus applied this algorithm to 2 different communities. One the one hand we were interested in the 4 different houses of Hogwarts ( Gryffindor, Slytherin, Ravenclaw and Hufflepuff), but on the other hand we were also interested in the interaction between the good and bad guys in Harry Potter. There is in Harry Potter one community of bad guys: the Death Eaters. Yes the name sounds horrible! But also several communities of good guys such as the Order of the Phoenix and the Army of Dumbledore. It seemed thus interesting to asses these two separated problems.
+  <p>We will use the Louvain algorithm to analyse the underlying communities in the Harry Potter network. </p>
+<p>
+We have thus applied this algorithm to 2 different sets of communities. On the one hand we were interested in the 4 different houses of Hogwarts ( Gryffindor, Slytherin, Ravenclaw and Hufflepuff), but on the other hand we were also interested in the interaction between the good and bad guys in Harry Potter. There is in Harry Potter one community of bad guys: the Death Eaters. Yes the name sounds horrible! But also several communities of good guys such as the Order of the Phoenix and the Army of Dumbledore. It seemed thus interesting to assess these two separated problems.
 </p>
+
+<p>
+We do not know what exactly to expect. We could have 2 different scenarios. One scenario could be that characters interact a lot in there own House. Another scenario would be that there is a lot of interaction between the most famous characters regardless of their house or conviction. The solution will probably be a blurry mix of these two scenarios.
+</p>
+
 
   <p>
     <center><img src="Figures/Community/Graph_house.png" width="100%" height="100%"
          alt = "The network of the main characters" /></center>
   </p>
-<center><p class="normal"> <b>Here we have the network except we have added the houses of the characters </b></p></center>
+<center><p class="normal"> <b>Here is a plot of network with only the House members. Red nodes are Gryffindor nodes. Green nodes are Slytherin nodes. Yellow nodes are Hufflepuff nodes. Blue nodes are Ravenclaw nodes. </b></p></center>
 
 
-  <p>Here is a plot of network with only the House members. Red nodes are Gryffindor nodes. Green nodes are Slytherin nodes. Yellow nodes are Hufflepuff nodes. Blue nodes are Ravenclaw nodes.
-
-  We notice in the center a higher density of Gryffindor nodes. This makes sense since in Harry Potter, the main house (the house of Harry Potter) is Gryffindor.
+  <p>
+ We notice in the center a higher density of Gryffindor nodes. This makes sense since in Harry Potter, the main house, the house of Harry Potter, is Gryffindor.
 </p>
 
 <p>
-We had a problem since not all of our nodes had a house or a good or bad label. We thus only kept the nodes that had such a label and the edges between these nodes. We have plotted our results in a confusion matrix in order to make our results more visual. The confusion matrix is a table to compare two different sets of non-overlapping communities.
-A number in the square (with row i and column j), is the number of characters that are in both community corresponding to row i and community corresponding to row j. We will use the confusion matrix to compare the communities that are naturally present in Harry Potter (houses, Good and Bad Guys) versus the communities found by the Louvain algorithm (these have no name and thus are just numbered).
+We had a problem since not all of our nodes had a house or a good or bad label. We thus only kept the nodes that had such a label and the links between these nodes. We have plotted our results in a confusion matrix in order to make our results more visual. 
+</p>
+
+<p>
+The confusion matrix is a table to compare two different sets of non-overlapping communities.
+A number in the square (with row i and column j), is the number of characters that are in both communities, the community corresponding to row i and the community corresponding to row j. We will use the confusion matrix to compare the communities that are naturally present in Harry Potter (houses, Good and Bad Guys) versus the communities found by the Louvain algorithm (these have no name and thus are just numbered).
 </p>
 
  
   <p>
     <center><img src="Figures/Community/Confusion_matrix_Houses.png" width="100%" height="100%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
+         alt = "Visualisation of the houses" /></center>
   </p>
   <center><p class="normal"> <b>In this figure the communites are visulized in a confusion matrix </b></p></center>
 
  <p>
-This matrix tells us that the categories of houses are not so good to distinguish the different communities. The only community that is somewhat better captured is the slytherin house. On the one hand, we see that the community 3 we have a vast majority of Slytherins. This is also the case in community 6.  On the other hand we distinguish community 2 which has members of several different houses but only one from Slytherin.
+This confusion matrix tells us that the categories of houses are not so good to distinguish the different communities. Indeed, most of the table entries have large values. The only community that is somewhat better captured is the slytherin house. On the one hand, we see that the community 3 we have a vast majority of Slytherins. This is also the case in community 6. On the other hand we distinguish communities 2 and 4 which has members of several different houses but only one from Slytherin. Why would Slytherin represent a better community? The explanation that we come up with was is that this house has a great deal of bad guys, while the other houses have good guys as members.
 </p>
 
 
@@ -364,69 +427,21 @@ This matrix tells us that the categories of houses are not so good to distinguis
 
 
 
+<p>
+A first observation here is that there are way more good than bad guys. This is because we took several different lists for the Good Guys : First Order of the Phoenix, Dumbledore's Army and the Order of the Phoenix allies. While we only had one interesting list for the bad Guys: the Death Eaters.
+</p>
+<p>
+We see though that the distinction is pretty good! In the first community all but one are members of Dumbledore's Army and all of them are good guys. The 3rd community captures the vast majority of the Death Eaters. We notice that people who were in the frontline to fight against the death eaters such as Severus Snape, Neville’s parents or Sirius Black end up in this community also. The two remaining communities contain other good guys but it is harder to find a deep underlying structure.
+
+<p>
+You can find a plot of these communities below. The Death Eater community is in black, while the Good guys are in blue. Each number corresponds to the community found by the Louvain algorithm (column of the confusion matrix).
+</p>
+
   <p>
     <img src="Figures/Community/Graph_DE_good_guys.png" width="100%" height="100%"
          alt = "Visualisation of the communities bad guys vs. good guys" />
   </p>
-  <center><p class="normal"> <b>Death eaters versus the Good guys </b></p></center>
-<p>
-A first observation here is that there are way more good than bad guys. This is because we took several different lists for the Good Guys :'First Order of the Phoenix, Dumbledore's Army and the Order of the Phoenix allies. While we only had one interesting list for the bad Guys: the Death Eaters.
-
-We see though that the distinction is pretty good! In the first community all but one are members of Dumbledore's Army. The 3rd community captures the vast majority of the Death Eaters. We notice that people who were in the frontline to fight against the death eaters such as Severus Snape, Neville’s parents or Sirius Black end up in this community also. The two remaining community contain other good guys but it is harder to see a deep structure.
-
-</p>
-
-</p>
- < <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-     <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">-->
-    </div>
- 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-
-    </div>
-  </div>
-    <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-    <p class="w3-wide"><i class="fa fa-birthday-cake"></i>Making spells</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-empire"></i>Speaking british</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-bomb"></i>Killing</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-    </div>
-  </div>
-  </div>
-    
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">190</span><br>
-    Characters
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">4</span><br>
-    Clusters
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">1189+</span><br>
-    Edges
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Philosopers Stone</span><br>
-    Most sentimental book
-  </div>
-</div>
-
-
-
-
-
+  <center><p class="normal"> <b> </b></p></center>
 
 
 <!-- Second Parallax Image with Portfolio Text -->
@@ -442,15 +457,17 @@ We see though that the distinction is pretty good! In the first community all bu
   <h4 class="w3-center"><em><br>"Happiness can be found, even in the darkest of times, if one only remembers to turn on the light." —Dumbledore,  Harry Potter and the Prisoner of Azkaban </em></h4><br>
 
   <p>
-The aim of the sentimental analysis is to understand more about the sentiment in the Harry Potter world. 
-Find the darkest and happiest books and discover if the books and the movie are telling the same sentimental story.
+The aim of the sentimental analysis is to understand more about the good and bad feelings in the Harry Potter world.  We want to discover if the books and the movie are telling the same sentimental story and find the darkest and happiest books.
+</p>
+
+ <p>
 Firstly, we are interested in the book's sentiments. We start with a deep understanding of the books page by page. The sentiment of the pages will guide our analysis.
 
 
   </p>
 
   <p>
-How can a page have sentiment? We have a big list of super common and used English words and a happiness grade for each one. The grade is based on the comparison and grading on average of the words taken from Twitter, Google Books (English), music lyrics (1960 to 2007), and the New York Times (1987 to 2007). Then, the sentiment of a page will be the average of the sentiments of the words on the page.
+How can a page have a feeling? We have a big list of super common and used English words and a happiness grade for each one. The grade is based on the comparison and grading on average of the words taken from Twitter, Google Books (English), music lyrics (1960 to 2007), and the New York Times (1987 to 2007). Each word thus has a score. Then, the sentiment of a page will be the average of the sentiments of the words on the page.
 
 
   </p>
@@ -459,7 +476,7 @@ How can a page have sentiment? We have a big list of super common and used Engli
 
 
   <p>
-Using same functions on Python, we have one plot for each movie with the sentiment profile of that book. A sentiment profile is a graph that has the sentiment on the y-axis and position in the text on the x-axis. The effect of changing the size of the sliding window is that it changes the amount of text we are taking in consideration. Starting with 15 words we capture the moving average of the sentiment of a few sentences. Increasing the window the moving average will say more about the whole book and can capture a more important flow. In a page there are usually around 500 words. Using one page as the window, it is possible to follow how the sentiment will change page by page.
+Using same functions on Python, we have one plot for each movie with the sentiment profile of that book. A sentiment profile is a graph that has the sentiment on the y-axis and position in the text on the x-axis. The effect of changing the size of the sliding window is that it changes the amount of text we are taking in consideration. Starting with 15 words we capture the moving average of the sentiment of a few sentences. Increasing the window the moving average will say more about the whole book and can capture a more important flow. In a page there are usually around 500 words. Using one page as a window, it is possible to follow how the sentiment will change page by page.
 
 
   </p>
@@ -541,14 +558,14 @@ The sentiment profile of the books is different: the maximum and minimum sentime
   </p>
 
   <p>
-We cannot find a book which has a calm behavior around the average. All books, instead, have lot of up and down with a jagged profile and sudden changes. This is what we expect from this book, where there are very happy and sad events.
+There is no book which has a calm behavior around the average. All books, instead, have lot of up and downs with a jagged profile and sudden changes. This is what we expect from this series of books, where there are numerous very happy and sad events.
 
 
   </p>
-For instance in book 1, Harry meets for the first time Voldemort and this is really clear from the sentiment profile. In the books there are also deeply sad moments like in book 2 when Harry is fighting Tom Riddle or in books 5 and 6 when respectively both Sirius Black and Dumbledore die. These moments are really clear in the sentiment profile with high and low peak.
+For instance in book 1, Harry meets for the first time Voldemort and this is really clear from the sentiment profile. However, there are also deeply sad moments like in book 2 when Harry is fighting Tom Riddle or in books 5 and 6 when respectively both Sirius Black and Dumbledore die. These moments are really clear in the sentiment profile with high and low peak..
 
   <p>
-We now take in consideration the subtitles of the 8 movies (book 7 was filmed in 2 parts). We want to visualize the sentiment in the movies, find the most sentimental moments. And than compare these moments with the one found in the books. Our goal is to find the difference between books and movies.
+We now take in consideration the subtitles of the 8 movies (book 7 was filmed in 2 parts). We want to visualize the sentiment profile in the movies, find the most sentimental moments. And then compare these moments with the one found in the books. Our goal is to find the difference between books and movies.
   </p>
 
 <div class="slideshow-container">
@@ -622,7 +639,7 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
 <!----------------------------------------- -->
 
   <p>
-On average the saddest movie is Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all books have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Castle (Rook). After Ron's sacrifice, there is a so sentimental speech between Harry and Hermione speaking about true friendship and courage.
+On average the saddest movies are Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all books have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Rook. After Ron's sacrifice, there is a so sentimental speech between Harry and Hermione speaking about true friendship and courage.
   </p>
 
 <body>
@@ -638,15 +655,15 @@ On average the saddest movie is Movie 1 and Movie 6, the happiest ones are Movie
 </body>
 
   <p>
-In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing the castle housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the harry potter movies.
+In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing the castle housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and on top of that Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the harry potter movies.
   </p>
 
   <p>
-Harry Potter fans know that there is a world of difference between the magical books and their respective film adaptations. While the Potter movies are nostalgic and possess a special charm of their own, there is a huge amount of detail that doesn't translate from the page to the screen. What is clear from the sentiment profile is that both are built to leave the reader and watcher in the grey area because there is a very sad moment and lot emotional up and down at the end of every books and movies. The most important events are present of course in both: in book 1 the second saddest moment is the chess game, which is also the saddest moment in movie 1. It’s possible to find a lot of parallels between them.
+Harry Potter fans, as we are, know that there is a world of difference between the magical books and their respective film adaptations. While the Potter movies are nostalgic and possess a special charm of their own, there is a huge amount of detail that doesn't translate from the page to the screen. What is clear from the sentiment profile is that both are built to leave the reader and watcher in the grey area because there are a lot emotional up and downs at the end of every books and movies. The most important events are present of course in both: in book 1 the second saddest moment is the chess game, which is also the saddest moment in movie 1. It’s possible to find a lot of parallels between them.
   </p>
 
   <p>
-In conclusion, we found an efficient way to detect and investigate the sentiment moment in the books and movies. We double checked the most sentimental moment and the turning points of the books in the movies and vice versa. It allowed us to understand more about how a movie is structured and why these movies are so passionate.
+In conclusion, we found an efficient way to detect and investigate the sentiment profile in the books and movies. We double checked the most sentimental moments and the turning points of the books in the movies and vice versa. It allowed us to understand more about each movie’s structure and why these movies are so passionate.
   </p>
 
   <p>
@@ -665,11 +682,16 @@ In conclusion, we found an efficient way to detect and investigate the sentiment
 <div class="w3-content w3-container w3-padding-64">
   <h3 class="w3-center">Spell analysis</h3>
   <h4 class="w3-center"><em>"For in dreams we enter a world that is entirely our own. Let them swim in the deepest ocean or glide over the highest cloud." — Dumbledore, Harry Potter and the Prisoner of Azkaban</em></h4>
+
+<p>
+We now will perform a count of the different spells present in the book. One could ask the question what is this different from the wordcloud? The fact is that most spells are not present with high frequency in the books. However, they appear in crucial moments. Following a spell count can thus give us a rough and maybe more refined idea of what happened at intense moments in the books.
+</p> 
+
   <p>
-    The frequency of each casted spell or curse was analyzed. In order to realize this we tokenized the books and then ran the frequency distribution function. Afterwards, we matched the spell list excel sheet with each tokenized term count book. Tokenization is for lexical analysis, the process of classifying characters into individual words based on a space delimiter.  This resulted in the frequency of spells and curses demonstrated below in a bar plot.
+   The frequency of each casted spell or curse was analyzed. In order to realize this we tokenized the books and then ran the frequency distribution function. Thereafter we matched the spell list excel sheet with each tokenized term count book. Tokenization is for lexical analysis, the process of classifying text into individual words based on a space delimiter.  This resulted in the frequency of spells and curses demonstrated below in a bar plot.
     </p>
 <p>
-We expected given the nature of the story that the frequency would increase as the universe became more complex with each year. This turned out to be the case. 
+We expected, given the nature of the story, that the frequency would increase as the universe became more complex with each year. This turned out to be the case. . 
 </p>
 
 
@@ -736,18 +758,17 @@ We expected given the nature of the story that the frequency would increase as t
 
  <p> 
 In the first book only few spells are casted and two curses, Mortis and Mimblewimble
- 
 </p>
  <p> 
 In the second book we already have more spells but a good example is the 6th book where a lot of spells are casted and many curses.
 
 </p>
  <p> 
-In book 3 we see that the most frequent spell is the expecto patronum. This is because it is the only spell that keeps away the dementors. Harry has to learn to master it because in this book there are plenty of dementors and Harry faints each time a dementor comes in contact with hm. 
+In book 3 we see that the most frequent spell is the expecto patronum. This is because it is the only spell that keeps away the dementors. Harry has to learn to master it because in this book there are plenty of dementors and Harry faints each time a dementor comes in contact with him. 
 </p>
 
   <p> 
-In book 6 one can see then the horcrux curse is mentioned over 40 times. That is of no surprise since the plot of the book is the search for the seven horcruxes that Voldemort divided his soul into.
+In book 6 one can see then the horcrux curse is mentioned over 40 times. That is of no surprise since the plot of the books 6 and 7 is the search for the seven horcruxes that Voldemort divided his soul into and destroy them.
 </p>
 
  <p>
@@ -765,31 +786,35 @@ And finally we reach book 7 we can see that the search continues for the horcrux
  </p>
 
 
+ <p> We also notice that the words ‘horcrux’ and ‘horcruxes’, as well as other words related to the horcruxes appear in the word cloud of books 6 and 7
+ </p>
+
+
 <h3 class="w3-center">TF-IDF</h3>
 <p class="w3-center"><em>Term frequency - inverse document frequency </em></p>
 
  <p>
-We want to find the most representing words for each book and visualize them in a figure, a word cloud figure. In a word cloud figure the words differ is size based on how representing they are for a given book.
+We want to find the most representing words for each book and visualize them in a figure, a word cloud figure. In a word cloud figure the words differ is size based on how representing they are for a given book. 
   </p>
 
   <p>
-To realize this we utilize the TFIDF criterion
+To realize this we utilize the TFIDF criterion:
   </p>
 
   <p>
 <ul>
-<li>TF: Term frequency, in each book see how often each word appears </li>
+<li>TF: Term frequency, in each book see how often each word appears  </li>
 <li>IDF: Inverse document frequency, see how important this word is compared to its appearance in other books. In other words to see if a given frequent word also appears in the other books.</li>
 
 </ul>
   </p>
 
   <p>
-    The result is a TFIDF matrix, in our case the rows are corresponding to the books and the columns to the words.
+   The result is a TFIDF matrix, in our case the rows are corresponding to the books and the columns to the words.
    </p>
 
  <p>
-  With this matrix we produce the seven word cloud figures, one for each book.
+ With this matrix we produce the seven word cloud figures, one for each book.
   </p>
 
 <div class="slideshow-container">
@@ -870,7 +895,8 @@ boggart :A boggart is an amortal shape-shifting non-being that takes on the form
 Pettigrew: Is introduce in this book and the reader is informed that he in fact has been Rons rat<br>
 grindylow : A Grindylow is a small, horned, pale-green water demon and a Dark creature<br>
 hinkypunk :The Hinkypunk is a little one-legged creature and looks as if it is made of smoke<br>
-executioner: An executioner from the Ministry of Magic that is sent to kill Buckbeak, Buckbeak turns out to be too valuable for Harry and the crew so Hermione helps the crew to travel back in time and save Buckbeak.<br><br>
+executioner: An executioner from the Ministry of Magic that is sent to kill Buckbeak, Buckbeak turns out to be too valuable for Harry and the crew so Hermione helps the crew to travel back in time and save Buckbeak.<br>
+<br>
 From the 5 five most representing words of this book, 3 of them are creatures from Professor Remus Lupin Defence against the dark art class, namely the boggart,grindylow and hinkypunk.
 </p>
  <h4>Book 4 </h4>
@@ -886,7 +912,7 @@ leprechaun:  Are magical creature that appear in this book
 bowtruckle: Is a magical creature studied in the class care of magical creatures<br>
 Thestrals : Skeleton flying horses, they were used in this book to fly the Orders member disguised as harry to a safe spot<br>
 clipboard<br>
-umbridge:  Dolores Jane Umbridge becomes a headmaster at hogwards in this book <br>replacing dumbeldore.<br>
+umbridge:  Dolores Jane Umbridge becomes a headmaster at Hogwards in this book <br>replacing Dumbeldore.<br>
 dai
 </p>
  <h4>Book 6 </h4>
