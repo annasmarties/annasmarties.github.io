@@ -150,7 +150,7 @@ p.normal {
 
 /* Third image (community photo) */
 .bgimg-5 {
-    background-image: url("https://bplusmovieblog.files.wordpress.com/2013/08/harry-potter-and-the-sorcerers-stone-260.png");
+    background-image: url("http://cdn.playbuzz.com/cdn/66a71bf2-10bc-4a55-8ac0-068219786f61/9d9b2dc4-924f-435c-90f4-6cf94944b121.jpg");
     min-height: 400px;
 }
 
@@ -224,15 +224,38 @@ p.normal {
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="data">
   <h2 class="w3-center">INTRODUCTION</h2>
-  <p class="w3-center"><em>Harry potter. A magic universe …
-…. With a lot of special characters ...
-That are waiting to be analysed</em></p>
-  <p>Harry potter.
+  <h4 class="w3-center"><em>“It is our choices, Harry, that show what we truly are, far more than our abilities.” — Dumbledore,  Harry Potter and the Chamber of Secrets</em></h4>
+  <p>Let’s jump in the magic universe of Harry Potter! We have a lot of special characters that are waiting to be analysed! Which are the key characters? Which house is it better to belong to? Would you rather be a good or a bad guy? What are the most happy and dark moments in the books and movies?  Stay tuned, because we will answer all these questions!
 </p>
 <body>
 <iframe width="854" height="480" src="https://www.youtube.com/embed/0gQwaoOFpzw" frameborder="0" gesture="media" allowfullscreen></iframe>
 <body>
 
+
+<p>
+We chose this topic because we are big fans of Harry Potter and we are interested in using our python skills on something we are passionate about. We know the communities and the characters. We also remember crying, being scared and laughing a lot in our childhood while we were watching the movies or reading the books. 
+</p>
+
+<p>
+There is a big universe and a lot of data about Harry Potter. It was easy to find the books and the analysis seemed interesting. There are some words that are typical to Harry Potter such as the spells or locations. So, we could also analyse them. Creating a network in this universe made also a lot of sense to us.
+</p>
+<p>
+
+The Network was created with the data from the  <a href="http://harrypotter.wikia.com/wiki/Main_Page" target="_blank">wikia</a> of Harry Potter.</p>
+
+
+
+
+
+<p>
+We will create a link from node a to node b if the name of node b appears on the wikia page of node a. Once we have the network, we notice that the graph is not connected. We thus only take the giant connected component. .
+</p>
+
+  <p>
+    <center><img src="Figures/Community/Big_graph.png" width="80%" height="80%"
+         alt = "The network of the main characters" /></center>
+  </p>
+  <center><p class="normal"> <b>This is the graph from which we have been working where each node is a character </b></p></center>
 
 
 </div>
@@ -246,7 +269,7 @@ That are waiting to be analysed</em></p>
 <!-- Container (Network Section) -->
 <div class="w3-content w3-container w3-padding-64" >
   <h2 class="w3-center">NETWORK ANALYSIS</h2>
-  <h4 class="w3-center"><em>Statistics of the network</em></h4>
+  <h4 class="w3-center"><em>“Harry - you're a great wizard, you know."— Hermione, Harry Potter and the Philosopher's Stone</em></h4>
   <p> 
 In this section we are trying to find out which characters are the most central. These are the most important characters. For this we used different tools such as betweenness centrality, PageRank, eigenvector centrality (for in and out links) and the HITS algorithm (finds Hubs and Authorities). We thus use these different measures to be able to compare them and to see if indeed they capture the most important characters in our network. The tools are rather technical to explain, thus we have explained them in our notebook. 
 <p> 
@@ -284,23 +307,19 @@ Finally, we notice a big correlation between the eigenvector out centrality and 
 </p> 
 
 
-  <p>
-    <center><img src="Figures/Community/Big_graph.png" width="100%" height="100%"
-         alt = "The network of the main characters" /></center>
-  </p>
-  <center><p class="normal"> <b>In this figure the characters are realized in a network </b></p></center>
 
 
 </div>
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-5 w3-display-container w3-opacity-min">
+<div class="bgimg-5 w3-display-container w3-opacity-min" id="community">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">THE COMMUNITES</span>
   </div>
 </div>
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="community">
+<div class="w3-content w3-container w3-padding-64" >
   <h3 class="w3-center">COMMUNITY ANALYSIS</h3>
+  <h4 class="w3-center"><em>“"We are only as strong as we are united, as weak as we are divided." — Dumbledore, Harry Potter and the Goblet of Fire</em></h4>
 
   <p>We will use the Louvain algorithm to analyse the underlying communities in the harry potter network. 
 
@@ -411,16 +430,16 @@ We see though that the distinction is pretty good! In the first community all bu
 
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-4 w3-display-container w3-opacity-min">
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="sentimental">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">SENTIMENTAL ANALYSIS</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="sentimental">
+<div class="w3-content w3-container w3-padding-64" >
   <h3 class="w3-center">SENTIMENTAL ANALYSIS</h3>
-  <p class="w3-center"><em><br> </em></p><br>
+  <h4 class="w3-center"><em><br>"Happiness can be found, even in the darkest of times, if one only remembers to turn on the light." —Dumbledore,  Harry Potter and the Prisoner of Azkaban </em></h4><br>
 
   <p>
 The aim of the sentimental analysis is to understand more about the sentiment in the Harry Potter world. 
@@ -444,61 +463,6 @@ Using same functions on Python, we have one plot for each movie with the sentime
 
 
   </p>
-<!--
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book1.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book2.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book3.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book4.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book5.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book6.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Book7.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  <p>Confusion Matrix of the Good and bad guys</p>
-
--->
 
 <!-- Slide for the sentimental analysis of the book : -->
 
@@ -657,143 +621,6 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
 
 <!----------------------------------------- -->
 
-<!--
-
-<div class="slideshow-container">
-
-<div class="mySlides fade" name="slider1">
-  
-  <center><img src="Figures/Sentimental/Book1.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade" name="slider1">
-  
-  <center><img src="Figures/Sentimental/Book2.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade" name="slider1">
-
-  <center><img src="Figures/Sentimental/Book3.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade" name="slider1">
-
-  <center><img src="Figures/Sentimental/Book4.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade" name="slider1">
-  
-  <center><img src="Figures/Sentimental/Book5.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade" name="slider1">
- 
-  <center><img src="Figures/Sentimental/Book6.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<div class="mySlides fade" name="slider1">
-  
-  <center><img src="Figures/Sentimental/Book7.png" style="width:50%"></center>
-  <div class="text"></div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1,1)">&#10095;</a>
-
-</div>
-
-<script> currentSlide(1,1)</script>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1,1)">Book1</span> 
-  <span class="dot" onclick="currentSlide(2,1)">Book2</span> 
-  <span class="dot" onclick="currentSlide(3,1)">Book3</span> 
-  <span class="dot" onclick="currentSlide(4,1)">Book4</span> 
-  <span class="dot" onclick="currentSlide(5,1)">Book5</span> 
-  <span class="dot" onclick="currentSlide(6,1)">Book6</span> 
-  <span class="dot" onclick="currentSlide(7,1)">Book7</span> 
-</div>
-
--->
-
-
-
-
-
-<!--
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie1.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie2.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
- 
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie3.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie4.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie5.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
- 
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie6.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie7.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-
-
-<h3>Image of the </h3>
-  <p>
-    <center><img src="Figures/Sentimental/Movie8.png" width="90%" height="90%"
-         alt = "Visualisation of the communities bad guys vs. good guys" /></center>
-  </p>
-  
-
-
--->
-
-
-
-
-
   <p>
 On average the saddest movie is Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all books have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Castle (Rook). After Ron's sacrifice, there is a so sentimental speech between Harry and Hermione speaking about true friendship and courage.
   </p>
@@ -827,7 +654,7 @@ In conclusion, we found an efficient way to detect and investigate the sentiment
   </p>
 </div>
   <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-6 w3-display-container w3-opacity-min">
+<div class="bgimg-6 w3-display-container w3-opacity-min"  id="frequency">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">WORD FREQUENCY</span>
   </div>
@@ -835,9 +662,9 @@ In conclusion, we found an efficient way to detect and investigate the sentiment
 
 
 <!-- Container (TFIDF Section) -->
-<div class="w3-content w3-container w3-padding-64" id="frequency">
+<div class="w3-content w3-container w3-padding-64">
   <h3 class="w3-center">Spell analysis</h3>
-  <p class="w3-center"><em>Frequency of spells and curses</em></p>
+  <h4 class="w3-center"><em>"For in dreams we enter a world that is entirely our own. Let them swim in the deepest ocean or glide over the highest cloud." — Dumbledore, Harry Potter and the Prisoner of Azkaban</em></h4>
   <p>
     The frequency of each casted spell or curse was analyzed. In order to realize this we tokenized the books and then ran the frequency distribution function. Afterwards, we matched the spell list excel sheet with each tokenized term count book. Tokenization is for lexical analysis, the process of classifying characters into individual words based on a space delimiter.  This resulted in the frequency of spells and curses demonstrated below in a bar plot.
     </p>
@@ -1276,11 +1103,34 @@ function showSlides(n, slideshownumber)
 
 <div class="w3-content w3-container w3-padding-64" id="conclusion">
   <h3 class="w3-center">Conclusion</h3>
-  <p class="w3-center"><em>The end</em></p>
-  <p>Harry potter. A magic universe …
-…. With a lot of special characters ...
-That are waiting to be analysed!
+  <h4 class="w3-center"><em>“I love magic.”  — Harry Potter, Harry Potter and the Goblet of Fire </em></h4>
+  <p>
+    We were happy to find some meaningful results  with the different tools that we used. Some happy moments matched perfectly the books and the movies, some books had a lot of certain spells with a pretty obvious underlying reason. We also found some relevant communities with the Louvain algorithm.
 </p>
+
+<p>
+  We did our best to show these results in comprehensive plots, that were logical for non scientific people. So all in all, we think we have some nice and clear outputs.
+</p>
+
+<h4> If we could borrow Hermione’s Time-Turner,... </h4>
+
+<p>
+  …. we could analyse more deeply our different communities or analyse some other communities in the huge Harry Potter universe.
+</p>
+
+<p>
+  …. we could analyse a lot of different sets of Harry Potter words, such as locations, objects, ...
+</p>
+
+<p>
+  …. we could improve the sentimental analysis by using the same tools to analyse the subtitles and the movies. This is not the case until now because of some technical issues. 
+</p>
+
+
+
+
+
+
 </div>
 
 <!-- Footer -->
