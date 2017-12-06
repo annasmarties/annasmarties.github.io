@@ -255,12 +255,12 @@ We will create a link from node a to node b if the name of node b appears on the
     <center><img src="Figures/Community/Big_graph.png" width="80%" height="80%"
          alt = "The network of the main characters" /></center>
   </p>
-  <center><p class="normal"> <b>This is the graph from which we have been working where each node is a character </b></p></center>
+  <center><p class="normal"> <b>This is the graph from which we have been working, each node is a character </b></p></center>
 
 
 
 
- < <div class="w3-row">
+  <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
      <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
       <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">-->
@@ -382,7 +382,7 @@ We have thus applied this algorithm to 2 different sets of communities. On the o
 </p>
 
 <p>
-We do not know what exactly to expect. We could have 2 different scenarios. One scenario could be that characters interact a lot in there own House. Another scenario would be that there is a lot of interaction between the most famous characters regardless of their house or conviction. The solution will probably be a blurry mix of these two scenarios.
+We do not know what exactly to expect. We could have 2 different scenarios. One scenario could be that characters interact a lot in there own House. Another scenario would be that there is a lot of interaction between the most famous characters regardless of their house or characteristics. The solution will probably be a blurry mix of these two scenarios.
 </p>
 
 
@@ -394,7 +394,7 @@ We do not know what exactly to expect. We could have 2 different scenarios. One 
 
 
   <p>
- We notice in the center a higher density of Gryffindor nodes. This makes sense since in Harry Potter, the main house, the house of Harry Potter, is Gryffindor.
+ We notice in the center a higher density of Gryffindor nodes. This makes sense since in the Harry Potter universe, the main house, the house of Harry Potter, is Gryffindor.
 </p>
 
 <p>
@@ -443,21 +443,23 @@ You can find a plot of these communities below. The Death Eater community is in 
   </p>
   <center><p class="normal"> <b> </b></p></center>
 
-
+</div>
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-4 w3-display-container w3-opacity-min" id="sentimental">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">SENTIMENTAL ANALYSIS</span>
+  <div class="bgimg-4 w3-display-container w3-opacity-min" id="sentimental">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">SENTIMENTAL ANALYSIS</span>
+    </div>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
+
+<!-- Container (SENTIMENTAL ANALYSIS Section) -->
 <div class="w3-content w3-container w3-padding-64" >
   <h3 class="w3-center">SENTIMENTAL ANALYSIS</h3>
   <h4 class="w3-center"><em><br>"Happiness can be found, even in the darkest of times, if one only remembers to turn on the light." —Dumbledore,  Harry Potter and the Prisoner of Azkaban </em></h4><br>
 
   <p>
-The aim of the sentimental analysis is to understand more about the good and bad feelings in the Harry Potter world.  We want to discover if the books and the movie are telling the same sentimental story and find the darkest and happiest books.
+The aim of the sentimental analysis is to understand better the good and bad feelings in the Harry Potter world.  We want to discover if the books and the movies are telling the same sentimental story and find the darkest and happiest books.
 </p>
 
  <p>
@@ -467,7 +469,7 @@ Firstly, we are interested in the book's sentiments. We start with a deep unders
   </p>
 
   <p>
-How can a page have a feeling? We have a big list of super common and used English words and a happiness grade for each one. The grade is based on the comparison and grading on average of the words taken from Twitter, Google Books (English), music lyrics (1960 to 2007), and the New York Times (1987 to 2007). Each word thus has a score. Then, the sentiment of a page will be the average of the sentiments of the words on the page.
+How can a page have a feeling? We have a big list of super commonly used English words and a happiness grade for each one. The grade is based on the comparison and grading on average of the words taken from Twitter, Google Books (English), music lyrics (1960 to 2007), and the New York Times (1987 to 2007). Each word thus has a score. Then, the sentiment of a page will be the average of the sentiments of the words on each page.
 
 
   </p>
@@ -476,7 +478,7 @@ How can a page have a feeling? We have a big list of super common and used Engli
 
 
   <p>
-Using same functions on Python, we have one plot for each movie with the sentiment profile of that book. A sentiment profile is a graph that has the sentiment on the y-axis and position in the text on the x-axis. The effect of changing the size of the sliding window is that it changes the amount of text we are taking in consideration. Starting with 15 words we capture the moving average of the sentiment of a few sentences. Increasing the window the moving average will say more about the whole book and can capture a more important flow. In a page there are usually around 500 words. Using one page as a window, it is possible to follow how the sentiment will change page by page.
+Using some functions in Python, we have one plot for each movie with the sentiment profile of that book. A sentiment profile is a graph that has the sentiment on the y-axis and position in the text on the x-axis. The effect of changing the size of the sliding window is that it changes the amount of text we are taking in consideration. Starting with 15 words we capture the moving average of the sentiment of a few sentences. Increasing the window the moving average will say more about the whole book and can capture a more important flow. In a page there are usually around 500 words. Using one page as a window, it is possible to follow how the sentiment will change page by page.
 
 
   </p>
@@ -554,7 +556,7 @@ Using same functions on Python, we have one plot for each movie with the sentime
 
 
   <p>
-The sentiment profile of the books is different: the maximum and minimum sentiment seem to be the same, but they behave differently. However, from book 5 the range will be bigger, spreading in the negative emotion. This could be due to fact that the children who were reading the first 4 books now are guys who can start to read some scarring, creepy and sad moments.
+The sentiment profile of the books is different: the maximum and minimum sentiment seem to be the same, but they behave differently. However, from book 5 the range is bigger, spreading in the negative emotion. This could be due to fact that the children that were reading the first 4 books have now grown older and can enjoy scarier, creepier and sader material.
   </p>
 
   <p>
@@ -562,7 +564,7 @@ There is no book which has a calm behavior around the average. All books, instea
 
 
   </p>
-For instance in book 1, Harry meets for the first time Voldemort and this is really clear from the sentiment profile. However, there are also deeply sad moments like in book 2 when Harry is fighting Tom Riddle or in books 5 and 6 when respectively both Sirius Black and Dumbledore die. These moments are really clear in the sentiment profile with high and low peak..
+For instance in book 1, Harry meets for the first time Voldemort and this is really clear from the sentiment profile. However, there are also deeply sad moments like in book 2 when Harry is fighting Tom Riddle or in books 5 and 6 when respectively both Sirius Black and Dumbledore die. These moments are really clear in the sentiment profile with high and low peak.
 
   <p>
 We now take in consideration the subtitles of the 8 movies (book 7 was filmed in 2 parts). We want to visualize the sentiment profile in the movies, find the most sentimental moments. And then compare these moments with the one found in the books. Our goal is to find the difference between books and movies.
@@ -639,7 +641,7 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
 <!----------------------------------------- -->
 
   <p>
-On average the saddest movies are Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all books have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Rook. After Ron's sacrifice, there is a so sentimental speech between Harry and Hermione speaking about true friendship and courage.
+On average the saddest movies are Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all books have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Rook. After Ron's sacrifice, there is a very sentimental speech between Harry and Hermione about true friendship and courage.
   </p>
 
 <body>
@@ -655,7 +657,7 @@ On average the saddest movies are Movie 1 and Movie 6, the happiest ones are Mov
 </body>
 
   <p>
-In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing the castle housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and on top of that Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the harry potter movies.
+In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing a housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and on top of that Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the Harry Potter movies.
   </p>
 
   <p>
@@ -666,11 +668,11 @@ Harry Potter fans, as we are, know that there is a world of difference between t
 In conclusion, we found an efficient way to detect and investigate the sentiment profile in the books and movies. We double checked the most sentimental moments and the turning points of the books in the movies and vice versa. It allowed us to understand more about each movie’s structure and why these movies are so passionate.
   </p>
 
-  <p>
 
-  </p>
 </div>
-  <!-- Third Parallax Image with Portfolio Text -->
+
+
+  <!-- Third Parallax Image with TFIDF Text -->
 <div class="bgimg-6 w3-display-container w3-opacity-min"  id="frequency">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">WORD FREQUENCY</span>
@@ -691,7 +693,7 @@ We now will perform a count of the different spells present in the book. One cou
    The frequency of each casted spell or curse was analyzed. In order to realize this we tokenized the books and then ran the frequency distribution function. Thereafter we matched the spell list excel sheet with each tokenized term count book. Tokenization is for lexical analysis, the process of classifying text into individual words based on a space delimiter.  This resulted in the frequency of spells and curses demonstrated below in a bar plot.
     </p>
 <p>
-We expected, given the nature of the story, that the frequency would increase as the universe became more complex with each year. This turned out to be the case. . 
+We expected, given the nature of the story, that the frequency would increase as the universe became more complex with each year. This turned out to be the case. 
 </p>
 
 
@@ -786,7 +788,7 @@ And finally we reach book 7 we can see that the search continues for the horcrux
  </p>
 
 
- <p> We also notice that the words ‘horcrux’ and ‘horcruxes’, as well as other words related to the horcruxes appear in the word cloud of books 6 and 7
+ <p> We also notice that the words ‘horcrux’ and ‘horcruxes’, as well as other words related to the horcruxes appear in the word cloud of books 6 and 7.
  </p>
 
 
@@ -927,6 +929,8 @@ carrow Siblings that are both Death Eaters<br>
 deluminator : Albus dumbledore's device which is used for taking out any light source and keeping them until bestowing them. <br>
 Peverell:  the Peverell family was the original owners of the Hallows. Antioch: the Elder Wand, Cadmus: the Resurrection Stone, and Ignotus: the Cloak of Invisibility
 </p>
+
+</div>
 <!--
 
 <script>
@@ -1107,7 +1111,7 @@ function showSlides(n, slideshownumber)
   </div>
 </div>
 -->
-</div>
+
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
