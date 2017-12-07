@@ -257,6 +257,9 @@ We will create a link from node a to node b if the name of node b appears on the
   </p>
   <center><p class="normal"> <b>This is the graph from which we have been working, each node is a character </b></p></center>
 
+<h4>Notebook</h4>
+This is the  <a href="http://nbviewer.jupyter.org/github/annasmarties/annasmarties.github.io/blob/master/ipynb/Harry%20Potter%20Network%20notebook.ipynb">notebook</a> for the project</p>
+
 
 
 
@@ -336,7 +339,7 @@ In the above graph one can see the results of the different measures, with respe
 </p> 
 
 <p> 
-Harry Potter nearly always appears on top. He is just distanced by Ron on the Hubs and eigenvector centrality out. This is because Harry Potter has plenty of links linking to him, thus plenty of people know him. While proportionally Ron has more links linking to other characters (out links). Ron thus knows plenty of other characters, but he is not really well known by the others. This can be due to the fact that he is really close to Harry, this means he will know a lot of people that Harry knows, but then those people will have much more connections to Harry than to him. This happens when your best friend has 7 books and movies about him..
+Harry Potter nearly always appears on top. He is just distanced by Ron on the Hubs and eigenvector centrality out. This is because Harry Potter has plenty of links linking to him, thus plenty of people know him. While proportionally Ron has more links linking to other characters (out links). Ron thus knows plenty of other characters, but he is not really well known by the others. This can be due to the fact that he is really close to Harry, this means he will know a lot of people that Harry knows, but then those people will have much more connections to Harry than to him. This happens when your best friend has 7 books and movies about him.
 </p> 
 
 
@@ -378,19 +381,21 @@ Finally, we notice a big correlation between the eigenvector out centrality and 
 
   <p>We will use the Louvain algorithm to analyse the underlying communities in the Harry Potter network. </p>
 <p>
-We have thus applied this algorithm to 2 different sets of communities. On the one hand we were interested in the 4 different houses of Hogwarts ( Gryffindor, Slytherin, Ravenclaw and Hufflepuff), but on the other hand we were also interested in the interaction between the good and bad guys in Harry Potter. There is in Harry Potter one community of bad guys: the Death Eaters. Yes the name sounds horrible! But also several communities of good guys such as the Order of the Phoenix and the Army of Dumbledore. It seemed thus interesting to assess these two separated problems.
+We have thus applied this algorithm to 2 different sets of communities. On the one hand we were interested in the 4 different houses of Hogwarts (Gryffindor, Slytherin, Ravenclaw and Hufflepuff), but on the other hand we were also interested in the interaction between the good and bad guys in Harry Potter. There is in Harry Potter one community of bad guys: the Death Eaters. Yes the name sounds horrible! But also several communities of good guys such as the Order of the Phoenix and the Army of Dumbledore. It seemed thus interesting to assess these two separated problems.
 </p>
 
 <p>
 We do not know what exactly to expect. We could have 2 different scenarios. One scenario could be that characters interact a lot in there own House. Another scenario would be that there is a lot of interaction between the most famous characters regardless of their house or characteristics. The solution will probably be a blurry mix of these two scenarios.
 </p>
 
-
+<p>
+Here is a plot of network with only the House members. Red nodes are Gryffindor nodes. Green nodes are Slytherin nodes. Yellow nodes are Hufflepuff nodes. Blue nodes are Ravenclaw nodes. 
+</p>
   <p>
     <center><img src="Figures/Community/Graph_house.png" width="100%" height="100%"
          alt = "The network of the main characters" /></center>
   </p>
-<center><p class="normal"> <b>Here is a plot of network with only the House members. Red nodes are Gryffindor nodes. Green nodes are Slytherin nodes. Yellow nodes are Hufflepuff nodes. Blue nodes are Ravenclaw nodes. </b></p></center>
+<center><p class="normal"> Confusion Matrix of the Houses<b></b></p></center>
 
 
   <p>
@@ -414,7 +419,7 @@ A number in the square (with row i and column j), is the number of characters th
   <center><p class="normal"> <b>In this figure the communites are visulized in a confusion matrix </b></p></center>
 
  <p>
-This confusion matrix tells us that the categories of houses are not so good to distinguish the different communities. Indeed, most of the table entries have large values. The only community that is somewhat better captured is the slytherin house. On the one hand, we see that the community 3 we have a vast majority of Slytherins. This is also the case in community 6. On the other hand we distinguish communities 2 and 4 which has members of several different houses but only one from Slytherin. Why would Slytherin represent a better community? The explanation that we come up with was is that this house has a great deal of bad guys, while the other houses have good guys as members.
+This confusion matrix tells us that the categories of houses are not so good to distinguish the different communities. Indeed, most of the table entries have large values. The only community that is somewhat better captured is the slytherin house. On the one hand, we see that the community 3 we have a vast majority of Slytherins. This is also the case in community 6. On the other hand we distinguish communities 2 and 4 which has members of several different houses but only one from Slytherin. Why would Slytherin represent a better community? The explanation that we come up with is that this house has a great deal of bad guys, while the other houses have good guys as members.
 </p>
 
 
@@ -648,24 +653,31 @@ We now take in consideration the subtitles of the 8 movies (book 7 was filmed in
 <!----------------------------------------- -->
 
   <p>
-On average the saddest movies are Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all books have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Rook. After Ron's sacrifice, there is a very sentimental speech between Harry and Hermione about true friendship and courage.
+On average the saddest movies are Movie 1 and Movie 6, the happiest ones are Movie 8 (part 2 of book 7) and Movie 4. However, all the movies have negative average sentiment. But let’s take a look closer. In movie 1 “Harry Potter and the sorcerer’s stone” there is a super happy moment at 2:12:00. Now we want to double check in the movie which moment is it. This scene is when Harry, Ron, and Hermione play their way across a chessboard to pass the White players in a giant-scaled and dangerous game of Wizard Chess. In order for our heroes to pass, they have to play deadly moves as Harry, Ron, and Hermione are part of the Black pieces as a Bishop, Knight, and Rook. After Ron's sacrifice, there is a very sentimental speech between Harry and Hermione about true friendship and courage.
   </p>
 
-<body>
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Jx3BuC4teV0?start=150" frameborder="0" allowfullscreen></iframe>
-</body>
+<br>
 
   <p>
  In movie 3 “The prisoner of Azkaban”  the saddest moment in when Sirius Black ‘wants’ to kill Harry and Hermione proposes to sacrifice herself to protect Harry.
   </p>
 
+<body>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/Jx3BuC4teV0?start=150" frameborder="0" allowfullscreen></iframe>
+</body>
+<br>
+<br>
+<br>
+<br>
+  <p>
+In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing a housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and on top of that Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the Harry Potter movies.
+  </p>
+<br>
   <body>
 <iframe width="854" height="480" src="https://www.youtube.com/embed/8cL527bg0II?start=130" frameborder="0" allowfullscreen></iframe>
 </body>
 
-  <p>
-In movie 4 “Harry Potter and the goblet of fire” starts with the saddest moment when Harry has a nightmare about Voldemort killing a housekeeper.  The saddest moment ever in all movies is in the last movie “Harry Potter deathly hallows part 2” at 1:02:00. The death eaters are conquering Hogwarts and on top of that Voldemort kills Snape. This moment has an average sentiment is -1 which is the lowest value in the Harry Potter movies.
-  </p>
+
 
   <p>
 Harry Potter fans, as we are, know that there is a world of difference between the magical books and their respective film adaptations. While the Potter movies are nostalgic and possess a special charm of their own, there is a huge amount of detail that doesn't translate from the page to the screen. What is clear from the sentiment profile is that both are built to leave the reader and watcher in the grey area because there are a lot emotional up and downs at the end of every books and movies. The most important events are present of course in both: in book 1 the second saddest moment is the chess game, which is also the saddest moment in movie 1. It’s possible to find a lot of parallels between them.
@@ -1163,6 +1175,8 @@ function showSlides(n, slideshownumber)
 
 <h3 class="w3-center">Sources</h3>
 
+<p>Could you just add this sentence:
+We took inspiration from the following links for the quotes and explanation of the Harry Potter scenes:</p>
 
 <a href="http://community.sparknotes.com/2017/06/26/the-20-best-quotes-in-all-of-harry-potter">http://community.sparknotes.com/2017/06/26/the-20-best-quotes-in-all-of-harry-potte</a>
 <br>
